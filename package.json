@@ -1,0 +1,27 @@
+{
+  "name": "fitness",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html -d build --public-url .",
+    "deploy": "gh-pages -d build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/razhnoff/fitness.git"
+  },
+  "author": "Maksim Razhnov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/razhnoff/fitness/issues"
+  },
+  "homepage": "https://github.com/razhnoff/fitness#readme",
+  "devDependencies": {
+    "gh-pages": "^3.1.0",
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.32.4"
+  }
+}
