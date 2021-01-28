@@ -1,0 +1,87 @@
+.modal {
+    position: absolute;
+    top: -200px;
+    left: 215px;
+    max-width: calc(350px + 760px);
+    display: flex;
+    box-shadow: 0 0 30px 2px rgba($clr_txt_black, 0.2);
+
+    & > .left-side {
+        background-image: url(../assets/bg_from.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 350px;
+        height: 520px;
+    }
+
+    & > .right-side {
+        background-color: $clr_txt_white;
+        display: flex;
+        flex-direction: column;
+        max-width: 760px;
+
+        & > div {
+            margin-top: 70px;
+            margin-bottom: 32px;
+            margin-left: 108px;
+            margin-right: 108px;
+        }
+
+        & .header-title {
+            margin: 0;
+            margin-right: auto;
+            font-size: 26px;
+            line-height: 1.15;
+            color: $clr_txt_black;
+            margin-left: auto;
+        }
+
+        & .header-sub-title {
+            font-size: 36px;
+            margin: 0;
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            color: $clr_txt_black;
+            text-transform: uppercase;
+            line-height: 0.83;
+        }
+
+        & .input-fields {
+            margin-top: 80px;
+            margin-bottom: 80px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 40px 30px;
+            grid-template-areas:
+                ". . ."
+                ". . .";
+
+            & > input {
+                outline: none;
+                border: none;
+                border-bottom: 1px solid $clr_txt_black;
+                padding-left: 0;
+                padding-bottom: 13px;
+
+                &:first-child::before {
+                    content: "";
+                    background-image: url("../assets/icon_down.png");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                }
+            }
+        }
+
+        & .main-btn {
+            display: block;
+            margin: 0;
+            margin-left: auto;
+            margin-right: auto;
+            // margin-bottom: 72px;
+        }
+    }
+}
