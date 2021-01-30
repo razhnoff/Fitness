@@ -1,13 +1,15 @@
 .modal {
+    &-wrapper {
+    }
     position: absolute;
     top: 75%;
     left: 250px;
+    z-index: 100;
     max-width: calc(350px + 760px);
     display: flex;
     box-shadow: 0 0 30px 2px rgba($clr_txt_black, 0.2);
-    z-index: 100;
 
-    & > .left-side {
+    & .left-side {
         background-image: url(../assets/bg_from.png);
         background-position: center;
         background-repeat: no-repeat;
@@ -16,7 +18,7 @@
         height: 520px;
     }
 
-    & > .right-side {
+    & .right-side {
         background-color: $clr_txt_white;
         display: flex;
         flex-direction: column;
@@ -115,15 +117,36 @@
     }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) and (max-width: 1280px) {
     .modal {
-        left: 0;
+        left: 15%;
+        max-width: 100%;
 
+        & .right-side {
+            & > div {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+        }
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1200px) {
     .modal {
+        left: 0;
         max-width: 100%;
+
+        & .right-side {
+            & > div {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .modal {
+        display: none;
     }
 }

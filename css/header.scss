@@ -99,4 +99,18 @@
             margin-left: 115px;
         }
     }
+
+    .nav {
+        min-width: 280px;
+
+        &:last-child {
+            min-width: 250px;
+        }
+    }
+
+    .nav-link,
+    .nav-btn {
+        font-size: 10px;
+    }
+
 }

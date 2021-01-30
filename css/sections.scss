@@ -209,7 +209,6 @@
         background-repeat: no-repeat;
         background-size: cover;
         width: 50%;
-        height: fit-content;
         padding-top: 132px;
         padding-bottom: 65px;
         display: flex;
@@ -245,10 +244,36 @@
     }
 }
 
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+    .programms {
+        & .cards {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: calc(100% - 60px);
+        }
+
+        & .card-item {
+            max-width: 310px;
+        }
+
+        & .card-body {
+            & .header-title,
+            & .header-sub-title,
+            & .main-btn {
+                margin-left: 20px;
+            }
+
+            & .header-sub-title {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1024px) {
     .intro-section {
         & .intro-model {
-            right: -25%;
+            right: -35%;
         }
 
         & .header-title,
@@ -268,11 +293,16 @@
             max-width: calc(300px * 3 + 60px);
             margin-left: auto;
             margin-right: auto;
+            justify-content: space-around;
 
             & img,
             & .card-body {
                 max-width: 300px;
             }
+        }
+
+        & .card-item:last-child {
+            display: none;
         }
 
         & .card-body {
@@ -295,10 +325,15 @@
 
     .trainers {
         & .cards {
+            justify-content: space-around;
             max-width: calc(250px * 3 + 40px * 2);
             & .header-sub-title {
                 max-width: 250px;
             }
+        }
+
+        & .card-item:last-child {
+            display: none;
         }
     }
 }
