@@ -3,10 +3,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    position: relative;
 }
 
 .nav {
-    display:flex;
+    display: flex;
     min-width: 350px;
     justify-content: space-between;
     align-items: center;
@@ -89,3 +90,13 @@
     color: $clr_txt_orange;
 }
 
+@media screen and (max-width: 1024px) {
+    .header-bg {
+        .header-title,
+        .header-sub-title,
+        .header-title.title-active,
+        .main-btn {
+            margin-left: 115px;
+        }
+    }
+}

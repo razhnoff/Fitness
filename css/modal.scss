@@ -1,10 +1,11 @@
 .modal {
     position: absolute;
-    top: -200px;
-    left: 215px;
+    top: 75%;
+    left: 250px;
     max-width: calc(350px + 760px);
     display: flex;
     box-shadow: 0 0 30px 2px rgba($clr_txt_black, 0.2);
+    z-index: 100;
 
     & > .left-side {
         background-image: url(../assets/bg_from.png);
@@ -59,21 +60,50 @@
                 ". . ."
                 ". . .";
 
-            & > input {
+            & fieldset {
+                position: relative;
+            }
+
+            & input {
                 outline: none;
                 border: none;
                 border-bottom: 1px solid $clr_txt_black;
                 padding-left: 0;
+                padding-right: 0;
                 padding-bottom: 13px;
-
-                &:first-child::before {
-                    content: "";
-                    background-image: url("../assets/icon_down.png");
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: cover;
-                }
             }
+        }
+
+        & .icon-arrow,
+        & .icon-date,
+        & .icon-clock {
+            position: absolute;
+            right: 0;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            cursor: pointer;
+        }
+
+        & .icon-arrow {
+            top: 30%;
+            background-image: url("../assets/icon_down.png");
+            width: 8px;
+            height: 5px;
+        }
+
+        & .icon-date {
+            top: 15%;
+            background-image: url("../assets/date.png");
+            width: 13px;
+            height: 15px;
+        }
+
+        & .icon-clock {
+            top: 15%;
+            width: 15px;
+            height: 16px;
+            background-image: url("../assets/time_icon.png");
         }
 
         & .main-btn {
@@ -81,7 +111,12 @@
             margin: 0;
             margin-left: auto;
             margin-right: auto;
-            // margin-bottom: 72px;
         }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .modal {
+        left: 0;
     }
 }

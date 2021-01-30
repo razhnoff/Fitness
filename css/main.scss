@@ -1,5 +1,5 @@
 * {
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
 }
 
 body,
@@ -7,9 +7,11 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+fieldset {
     margin: 0;
     padding: 0;
+    border: none;
 }
 
 .content-wrapper {
