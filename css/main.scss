@@ -35,4 +35,9 @@ fieldset {
     border: none;
     cursor: pointer;
     width: fit-content;
+
+    &:hover {
+        color: #e6e6e6;
+        background-color: #e1702b;
+    }
 }

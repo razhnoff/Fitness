@@ -56,6 +56,10 @@
                 align-items: center;
                 line-height: 2.15;
                 font-size: 14px;
+
+                &:hover {
+                    opacity: 0.8;
+                }
             }
         }
 
@@ -126,6 +130,10 @@
             text-decoration: none;
             color: $clr_txt_white;
             font-size: 14px;
+
+            &:hover {
+                opacity: 0.8;
+            }
         }
 
         & > .header-sub-title {

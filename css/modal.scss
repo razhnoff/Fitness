@@ -117,7 +117,7 @@
     }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1280px) {
+@media all and (min-width: 1200px) and (max-width: 1280px) {
     .modal {
         left: 15%;
         max-width: 100%;
@@ -131,9 +131,20 @@
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media all and (min-width: 1000px) and (max-width: 1200px) {
+    .modal {
+        left: 5%;
+    }
+}
+
+@media all and (max-width: 1000px) {
     .modal {
         left: 0;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 1200px) {
+    .modal {
         max-width: 100%;
 
         & .right-side {
@@ -145,7 +156,7 @@
     }
 }
 
-@media screen and (max-width: 767px) {
+@media all and (max-width: 767px) {
     .modal {
         display: none;
     }
