@@ -1,6 +1,5 @@
 .footer {
     display: flex;
-    align-items: center;
     flex-direction: column;
     background-color: $clr_txt_black;
 
@@ -9,6 +8,7 @@
         display: flex;
         margin-left: auto;
         margin-right: auto;
+        max-width: 1530px;
     }
 
     &-contacts {
@@ -28,7 +28,7 @@
     }
 
     &-blogs {
-        margin-left: 55px;
+        margin-left: 3rem;
 
         & .header-sub-title {
             margin: 0;
@@ -125,7 +125,7 @@
     }
 
     & .footer-social {
-        margin-left: 55px;
+        margin-left: 3rem;
         & > a {
             text-decoration: none;
             color: $clr_txt_white;
@@ -282,6 +282,8 @@
 .about-mockup {
     margin-top: 78px;
     margin-bottom: 38px;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 14px;
     color: $clr_txt_orange;
 }
@@ -296,7 +298,7 @@
 
         & .footer-blogs,
         & .footer-social {
-            margin-left: 15px;
+            margin-left: 2rem;
         }
 
         & .connection {
@@ -312,18 +314,23 @@
         }
 
         & .footer-contacts {
-            max-width: calc(100% - 60px);
+            max-width: calc(100% - 4rem);
             margin-left: auto;
             margin-right: auto;
 
             & .header-sub-title {
-                max-width: calc(100% - 60px);
+                max-width: 100%;
             }
         }
 
         & .footer-blogs {
-            margin-left: 30px;
             margin-top: 30px;
+
+            & .blog-items a:first-child > .blog-preview,
+            & .blog-items a:nth-child(2) > .blog-preview,
+            & .blog-items a:last-child > .blog-preview {
+            
+            }
 
             & span {
                 max-width: unset;
@@ -334,5 +341,47 @@
             margin-top: 30px;
             margin-left: 30px;
         }
+    }
+}
+
+@media all and (max-width: 425px) {
+    .footer {
+        & .footer-contacts {
+            max-width: calc(100% - 1rem);
+        }
+
+        & .footer-blogs {
+            margin-left: 0.5rem;
+        }
+
+        & .footer-social {
+            margin-left: 0.5rem;
+        }
+    }
+}
+
+@media all and (max-width: 375px) {
+    .footer {
+        & .connection {
+            flex-direction: column;
+
+            & > input {
+                max-width: 90%;
+            }
+
+            & .main-btn {
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 20px; 
+            }
+        }
+    }
+}
+
+@media all and (max-width: 320px) {
+    .footer .header-sub-title,
+    .footer-blogs .blog-items span,
+    .footer .footer-social > a {
+            font-size: 12px;
     }
 }

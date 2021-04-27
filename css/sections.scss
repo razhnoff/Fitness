@@ -62,7 +62,6 @@
 
     & .cards {
         margin-top: 50px;
-        margin-left: 215px;
         display: flex;
         justify-content: space-between;
         max-width: calc(350px * 3 + 60px);
@@ -163,6 +162,7 @@
 
     & .cards {
         display: flex;
+        justify-content: space-around;
         margin-top: 70px;
         margin-left: auto;
         margin-right: auto;
@@ -257,12 +257,6 @@
         }
 
         & .card-body {
-            & .header-title,
-            & .header-sub-title,
-            & .main-btn {
-                margin-left: 20px;
-            }
-
             & .header-sub-title {
                 font-size: 12px;
             }
@@ -273,22 +267,11 @@
 @media screen and (max-width: 1024px) {
     .intro-section {
         & .intro-model {
-            right: -35%;
-        }
-
-        & .header-title,
-        & .header-sub-title,
-        & .main-btn {
-            margin-left: 150px;
+            right: -20%;
         }
     }
 
     .programms {
-        & .header-title,
-        & .header-sub-title {
-            margin-left: 150px;
-        }
-
         & .cards {
             max-width: calc(300px * 3 + 60px);
             margin-left: auto;
@@ -335,5 +318,77 @@
         & .card-item:last-child {
             display: none;
         }
+    }
+}
+
+@media all and (max-width: 425px) {
+    .personal {
+        & .header-sub-title {
+            font-size: 36px;
+        }
+    }
+
+    .programms {
+        & .cards .card-item:first-child {
+            display: none;
+        }
+    }
+
+    .trainers {
+        & .cards .card-item:first-child {
+            display: none;
+        }
+    }
+
+    .trial {
+        & .right-side {
+            display: none;
+        }
+
+        & .left-side {
+            width: 100%;
+
+            & .header-sub-title {
+                font-size: 36px;
+            }
+        }
+    }
+
+    .intro-section {
+        padding-top: 120px;
+
+        & .intro-model {
+            right: -120%;
+            top: 70px;
+        }
+
+        & .main-btn {
+            margin-bottom: 60px;
+        }
+    }
+}
+
+@media all and (max-width: 375px) {
+    .personal {
+        & .header-sub-title {
+            font-size: 26px;
+        }
+    }
+
+}
+
+@media all and (max-width: 320px) {
+    .intro-section {
+        & .intro-model {
+            right: -180%;
+        }
+    }
+
+    .personal .header-title {
+        font-size: 26px;
+    }
+
+    .trial .left-side .header-sub-title {
+        font-size: 26px;
     }
 }
